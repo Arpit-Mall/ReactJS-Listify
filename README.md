@@ -42,16 +42,7 @@ Listify is a powerful full-stack to-do application built with the MERN stack (Mo
     ```bash
     npm install
     ```
-3. Create a `.env` file in the backend directory and add the following environment variable:
-    ```plaintext
-    MONGODB_URI = your_mongodb_connection_string
-    JWT_SEC = your_secret_string. For eg:- "Hello@World"
-    ```
-4. Start the backend server:
-    ```bash
-    npm run dev
-    ```
-    or
+3. Start the backend server:
     ```bash
     nodemon index.js
     ```
@@ -66,9 +57,11 @@ Listify is a powerful full-stack to-do application built with the MERN stack (Mo
     ```bash
     npm install
     ```
-3. Create a `.env` file in the root directory and add the backend URL:
+3. Create a `.env` file in the root directory and add the following environment variable:
     ```plaintext
-    REACT_APP_API_URL=http://localhost:5000
+    MONGODB_URI = your_mongodb_connection_string
+    JWT_SEC = your_secret_string. For eg:- "Hello@World"
+    ```
     ```
 4. Start the frontend development server:
     ```bash
