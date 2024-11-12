@@ -3,7 +3,7 @@ import NoteContext from "./noteContext";
 // import { json } from "react-router-dom";
 
 const NoteState = (props) => {
-  const host = "http://localhost:5000";
+  const host = "https://listify-server-e2p1.onrender.com";
   const notesInitial = [];
 
   const [notes, setNotes] = useState(notesInitial);

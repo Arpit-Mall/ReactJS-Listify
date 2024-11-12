@@ -4,7 +4,6 @@ const { body, validationResult } = require("express-validator");
 const UserSchema = require("../models/UserSchema");
 const bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
-const JWT_SEC="MyNameIsArpit@Mall";
 var FetchUser = require("../middleware/fetchUser");
 
 
@@ -50,7 +49,7 @@ router.post("/createuser",
               id:user.id
             }
           }
-          const authToken =jwt.sign(data,JWT_SEC);
+          const authToken =jwt.sign(data,process.env.JWT_SEC);
           
           success=true;
           res.send({success,authToken})  
@@ -102,7 +101,7 @@ router.post("/login",
         }
       }
       
-      const authToken = jwt.sign(data,JWT_SEC);
+      const authToken = jwt.sign(data,process.env.JWT_SEC);
       success=true;
       res.json({success,authToken});
     } 
